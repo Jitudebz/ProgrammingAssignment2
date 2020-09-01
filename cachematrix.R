@@ -52,7 +52,7 @@ cacheSolve <- function(x, ...) {
     return(m)
   }
   data <- x$get()
-  m <- solve(data, ...)
+  m <- solve(data, ...)  #here the original inverse happens as we use the solve function
   x$setinverse(m)
   m
 }
@@ -60,7 +60,7 @@ cacheSolve <- function(x, ...) {
 
 #Testing
 set.seed(10)
-mat1 <- matrix(rnorm(9), 3, 3)
+mat1 <- matrix(rnorm(9), 3, 3) # We can test with any big square matrix as well
 mat1_inv <-solve(mat1)
 
 mat_new <- makeCacheMatrix(mat1)
