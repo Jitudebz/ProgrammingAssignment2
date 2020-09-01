@@ -72,10 +72,21 @@ cacheSolve <- function(x, ...) {
 #Testing
 set.seed(10)
 mat1 <- matrix(rnorm(9), 3, 3) # We can test with any big square matrix as well
+solve(mat1)
+
+mat_new <- makeCacheMatrix(mat1)
+mat_new_inv <- cacheSolve(mat_new)
+
+mat_new_inv
+
+
+#Example 2
+
+set.seed(10)
+mat1 <- matrix(rnorm(100), 10, 10)
 mat1_inv <-solve(mat1)
 
 mat_new <- makeCacheMatrix(mat1)
 mat_new_inv <- cacheSolve(mat_new)
 
 mat1_inv == mat_new_inv
-
