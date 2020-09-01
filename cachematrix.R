@@ -86,7 +86,11 @@ set.seed(10)
 mat1 <- matrix(rnorm(100), 10, 10)
 mat1_inv <-solve(mat1)
 
-mat_new <- makeCacheMatrix(mat1)
-mat_new_inv <- cacheSolve(mat_new)
 
-mat1_inv == mat_new_inv
+mat_new <- makeCacheMatrix(mat1)
+mat_new$get() #gets the original matrix
+mat_new$getinverse() #gets the inverse matrix
+
+mat_new_inv <- cacheSolve(mat_new) #getting cached data
+
+mat1_inv == mat_new_inv #checking if the inverse done is correct or not
