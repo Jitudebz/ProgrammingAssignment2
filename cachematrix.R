@@ -1,9 +1,13 @@
 ## Put comments here that give an overall description of what your
 ## functions do
 
-#If mean is a function whose code is already given in the assignment the solve is also a function. 
-#R does't understand anyfunctions purpose so if I can replicate the same function makeVector 
-#function as makeCacheMatrix and cachemean as cacheSolve so I think the purpose is solved. 
+#If mean is a function whose code is already given in the assignment then solve is also a function like mean. 
+#R does't understand any purpose functions, so, if I can replicate the same function makeVector 
+#as makeCacheMatrix and cachemean as cacheSolve so I think the purpose is solved. 
+#This is very simple to understand because computer will perform whatever the function does.
+# mean() - it calculates means
+# solve() - it will calculate inverse
+
 #That's the analogy is what I can understand and applied it below. :-)
 
 ## Write a short comment describing this function
